@@ -1,6 +1,8 @@
 # M3UTube
 
-# Documentation
+## Documentation
+
+### M3UTube
 
 This script converts a list of YouTube URLs in a txt file to a remote M3U playlist file that can be read by any music player. The output M3U playlist includes only the valid YouTube URLs found in the input file.
 Usage
@@ -11,9 +13,16 @@ python youtube_to_m3u.py <input_file> <output_file>
 
 `utput_file`: The name of the output M3U playlist file.
 
+### M3UTube-Playlist
+if it is a playlist, use the M3UTube-Playlist.py script.
+
+```
+python M3UTube-Playlist.py "https://www.youtube.com/playlist?list=PLAYLIST_ID" playlist_name
+```
 ## Dependencies
 
 This script requires the Python re module.
-Output Format
+
+## Output Format
 
 The output M3U playlist file is formatted according to the M3U file format. Each YouTube URL is preceded by an #EXTINF tag, which specifies the duration of the video (in seconds) and the title of the video (which is set to "YouTube" in this script).
